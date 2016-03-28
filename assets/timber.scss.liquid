@@ -705,9 +705,6 @@ $class-type: unquote(".");
 /*============================================================================
   #Basic Styles
 ==============================================================================*/
-html {
-  background-color: $colorFooterBg;
-}
 
 body {
   background-color: $colorBody;
@@ -2179,15 +2176,15 @@ label.error {
 /*============================================================================
   #Site Footer
 ==============================================================================*/
-.site-footer {
-  background-color: $colorFooterBg;
-  padding: $gutter 0;
-  color: $colorFooterText;
+// .site-footer {
+//   background-color: $colorFooterBg;
+//   padding: $gutter 0;
+//   color: $colorFooterText;
 
-  @include at-query ($min, $large) {
-    padding: ($gutter * 2) 0;
-  }
-}
+//   @include at-query ($min, $large) {
+//     padding: ($gutter * 2) 0;
+//   }
+// }
 
 /*============================================================================
   #Product and Collection Grids
@@ -2540,3 +2537,98 @@ label.error {
 }
 
 {% endif %} // settings.ajax_cart_method
+
+
+// 
+// 
+// Bike Index specific styles
+//
+// 
+// 
+//
+
+//________________________
+//
+// Colors
+//
+//________________________
+
+$blue-lighter: #EBF5FB;
+$blue-light: #99CBED;
+$blue: #3498DB;
+$blue-dark: #2C3E50;
+
+// Wet Asphalt
+$gray-blue-dark: #34495E;
+
+// Concrete
+$gray-blue-light: #95A5A5;
+
+$red: #C0392B;
+$red-dark: rgb(192,57,43);
+
+$peach: #E74C3C;
+$peach-light: #E85546;
+$peach-lighter: #ED796D;
+
+$yellow-light: rgb(231,220,188);
+
+$gray-lightest: #F4F6F7;
+$gray-lighterer: #EEF2F3;
+$gray-lighter: #ECF0F1;
+$gray-light: #a7a7a7;
+$gray: #bebebe;
+
+$green: #2ECC71;
+$green-light: #52D589;
+$green-dark: #27AE60;
+
+
+//________________________
+//
+// Mods
+//
+//________________________
+
+html {
+  background: $gray-lighter;
+}
+
+.site-header {
+  background: $gray-lighter;
+  border-bottom: 1px solid darken($gray-lighter, 2.5%);
+  margin-bottom: 60px;
+  .shopping-cart-menu-item {
+    float: right;
+  }
+}
+
+.header-logo {
+  a {
+    display: block;
+    img {
+      display: block;
+      float: left;
+      margin-left: -83px;
+      height: 83px;
+    }
+    h2 {
+      float: left;
+      color: $gray-blue-dark;
+      font-size: 20px;
+      margin: 29px 0 0;
+    }
+    &:hover { h2 { color: $gray-blue-dark; } }
+  }
+}
+
+.site-footer {
+  background: $gray-lighter;
+  padding-bottom: 30px;
+  a {
+    color: $blue;
+    &:hover {
+      color: darken($blue, 15%);
+    }
+  }
+}
