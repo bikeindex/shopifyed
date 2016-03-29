@@ -2586,7 +2586,7 @@ $green-dark: #27AE60;
 
 //________________________
 //
-// Mods
+// General
 //
 //________________________
 
@@ -2626,9 +2626,51 @@ html {
   background: $gray-lighter;
   padding-bottom: 30px;
   a {
-    color: $blue;
+    color: $blue-dark;
     &:hover {
-      color: darken($blue, 15%);
+      color: darken($blue, 10%);
+      text-decoration: underline;
     }
   }
+}
+
+//________________________
+//
+// Products
+//
+//________________________
+
+$product-grid-item-border: $gray-light;
+
+.product-grid-item {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 1px solid $product-grid-item-border;
+  border-radius: 4px;
+  overflow: hidden;
+  &:hover .product-grid-item-title {
+    text-decoration: underline;
+  }
+  h5 { 
+    margin: 0;
+    font-weight: normal;
+    color: $gray-blue-dark;
+    .product-grid-item-title, .product-grid-item-price { 
+      display: block; float: left;
+      padding: .25em .25em .5em;
+    }
+  }
+  .product-grid-item-title {
+    width: 80%;
+    border-right: 1px solid $product-grid-item-border;
+  }
+  .dollarsign {
+    color: $gray-light;
+  }
+  .product-grid-item-price {
+    width: 20%;
+    text-align: center;
+  }
+  img { display: block; }
 }
